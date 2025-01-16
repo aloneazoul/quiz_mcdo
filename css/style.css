@@ -1,0 +1,301 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background: #F0E1C6;
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+header {
+    background-color: #2C6B2F;
+    margin-bottom: 20px;
+}
+
+header img {
+    width: 80px;
+    height: auto;
+}
+header i {
+    font-size: 40px;
+    color: #F0E1C6; /* Couleur de l'icône régulière */
+    position: relative; /* Nécessaire pour le positionnement des icônes */
+    display: inline-block;
+}
+header .align-text {
+    margin-top: 5px; /* Ajuste la marge supérieure selon le besoin */
+}
+
+
+/* Icône régulière */
+header i .regular-icon {
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: opacity 0.3s ease; /* Transition de l'opacité */
+}
+
+/* Icône solide (invisible au départ) */
+header i .solid-icon {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0; /* L'icône solide est invisible au départ */
+    transition: opacity 0.3s ease; /* Transition pour l'opacité */
+    color: #2C6B2F; /* Couleur de l'icône solide */
+}
+
+/* Lors du survol, on cache l'icône régulière et on affiche l'icône solide */
+header i:hover .regular-icon {
+    opacity: 0; /* L'icône régulière devient invisible */
+}
+
+header i:hover .solid-icon {
+    opacity: 1; /* L'icône solide devient visible */
+}
+
+
+/* Styles du footer */
+footer {
+    background-color: #2C6B2F; /* Couleur de fond verte */
+    padding: 20px 0;
+    font-size: 16px;
+}
+
+footer h5 {
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #F0E1C6;
+}
+
+footer ul {
+    padding-left: 0;
+}
+
+footer ul li {
+    margin-bottom: 8px;
+    color: #FFF8E6;
+}
+
+footer a {
+    color: #FFF8E6;
+    transition: color 0.3s;
+    text-decoration: none;
+}
+
+footer a:hover {
+    color: #F0E1C6; /* Change la couleur des liens au survol */
+}
+
+footer .fab, footer .fas {
+    margin-right: 8px; /* Espace entre l'icône et le texte */
+}
+
+footer .row {
+    margin-bottom: 5px;
+}
+
+footer .mt-3 {
+    margin-top: 30px;
+}
+
+footer .text-center {
+    margin-top: 20px;
+    font-size: 14px;
+}
+
+/* Pour les icônes dans le footer */
+footer .fab, footer .fas {
+    font-size: 20px;
+}
+
+
+main h1{
+    color: #2C6B2F;
+}
+
+main h2{
+    color: #2C6B2F;
+    font-size: 28px;
+}
+
+/* Personnalisation de la barre de recherche */
+.input-group{
+    box-shadow: -5px 5px 5px rgba(50, 50, 50, 0.7); /* Ajouter un effet de lumière autour du champ */
+    border-radius: 10px;
+}
+
+/* Personnalisation de la barre de recherche */
+ .custom-search {
+    border-radius: 10px;
+    background-color: #F0E1C6;
+    border: 2px solid #2C6B2F;
+    border-right: none;
+}
+
+/* Quand l'input est en focus (quand on clique dedans) */
+.custom-search:focus {
+    background: #FFF8E6; /* Un ton légèrement plus clair pour un effet visuel subtil */
+    border: 2px solid #3B8C47; /* Une teinte légèrement plus vive du vert pour le focus */
+    box-shadow: 0 0 5px rgba(50, 50, 50, 0.7), 0 0 5px rgba(50, 50, 50, 0.7); /* Un effet de lueur autour du champ */
+    outline: none; /* Supprime le contour par défaut */ 
+}
+
+
+/* Bouton de recherche intégré */
+.search-btn {
+    border-radius: 10px;
+    background-color: #F0E1C6;
+    color: #2C6B2F;
+    border: 2px solid #2C6B2F;
+    border-left: none;
+    font-size: 25px;
+}
+
+.search-btn:hover {
+    background-color: #2C6B2F;
+    color: #F0E1C6;
+    border: 2px solid #2C6B2F;
+    border-left: none;
+}
+
+/*Bouton norme*/
+
+.custom-button{
+    box-shadow: -5px 5px 5px rgba(50, 50, 50, 0.7);
+    border-radius: 10px;
+    padding: 10px ;
+    font-size: 18px;
+    width: 100%;
+    transition: background-color 0.5s ease, color 0.5s ease; /* Transition pour la couleur de fond et du texte */
+}
+
+.white-button{
+    background-color: #F0E1C6;
+    color: #2C6B2F;
+    align-items: center; /* Aligner verticalement le texte et l'icône */
+    display: flex; /* Ajouté pour activer le modèle flexbox */
+    justify-content: space-between; /* Espace entre le texte et l'icône */
+    border: 2px solid #2C6B2F;
+}
+
+.red-button{
+    background-color: #B22222;
+    color: #F0E1C6;
+    border: 2px solid #B22222;
+}
+.red-button:hover{
+    background-color: #F0E1C6;
+    color: #B22222;
+    border: 2px solid #B22222;
+}
+
+.black-button{
+    background-color: #2C6B2F;
+    color: #F0E1C6;
+    border: 2px solid #2C6B2F;
+}
+.black-button:hover{
+    background-color: #F0E1C6;
+    color: #2C6B2F;
+    border: 2px solid #2C6B2F;
+}
+
+.admin-button{
+    width: calc(100% / 12 * 6.5);
+}
+
+.custom-button i{
+    background: 0 0 5px rgba(44, 107, 47, 0.6); /* Ajouter un effet de lumière autour du champ */
+}
+
+.carousel-button{
+    background-color: #F0E1C6;
+    color: #2C6B2F;
+    border: 2px solid #2C6B2F;
+    height: 150px;
+    font-size: 30px;
+}
+
+.carousel-button:hover{
+    background-color: #2C6B2F; /* Fond vert foncé */
+    color: #F0E1C6; /* Texte beige clair */
+}
+
+.card{
+    border: 2px solid #2C6B2F;
+    background-color: #F0E1C6;
+    box-shadow: -5px 5px 5px rgba(50, 50, 50, 0.7); 
+    border-radius: 10px;
+
+}
+
+label{
+    color: #2C6B2F;
+    font-size: 19px;
+}
+
+/*modification des zones de saisie (pas des searchbar)*/
+.customer-input{
+    background: #F0E1C6;
+    border: 2px solid #2C6B2F;
+    box-shadow: -5px 5px 5px rgba(50, 50, 50, 0.7); 
+}
+
+.customer-input:focus{
+    background: #FFF8E6; /* Un ton légèrement plus clair pour un effet visuel subtil */
+    border: 2px solid #3B8C47; /* Une teinte légèrement plus vive du vert pour le focus */
+    box-shadow: 0 0 5px rgba(50, 50, 50, 0.7), 0 0 5px rgba(50, 50, 50, 0.7); /* Un effet de lueur autour du champ */
+    outline: none; /* Supprime le contour par défaut */ 
+}
+
+/*carousel*/
+/* Personnalisation des icônes de flèche */
+.carousel-inner {
+    overflow: visible; /* Masque les éléments en dehors du carrousel */
+  }
+.carousel-control-prev i, .carousel-control-next i {
+    font-size: 20px; /* Taille plus petite pour les flèches */
+    color: #F0E1C6; /* Couleur beige pour les flèches */
+}
+/* Personnalisation du cercle autour des flèches */
+.icon-circle {
+    width: 40px; /* Taille du cercle */
+    height: 40px; /* Taille du cercle */
+    display: flex;
+    justify-content: center; /* Centrer l'icône horizontalement */
+    align-items: center; /* Centrer l'icône verticalement */
+    border-radius: 50%; /* Pour faire un cercle parfait */
+    border: 2px solid transparent; /* Bord transparent au départ */
+    background-color: #2C6B2F; /* Vert pour le cercle */
+}
+/* Effet de survol sur les flèches */
+.carousel-control-prev:hover .icon-circle, .carousel-control-next:hover .icon-circle {
+    background-color: #F0E1C6; /* Beige pour l'intérieur du cercle */
+    border-color: #2C6B2F; /* Bord vert */
+}
+/* Personnalisation des contrôles pour ajuster les boutons */
+.carousel-control-prev, .carousel-control-next {
+    width: 80px; /* Largeur du bouton de navigation */
+    height: 60px; /* Hauteur du bouton de navigation */
+    top: 50%; /* Centrer verticalement */
+    transform: translateY(-50%); /* Centrage vertical précis */
+    background: none; /* Pas de fond pour les boutons */
+    border: none; /* Enlever la bordure */
+    opacity: 1; /* Empêche la transparence */
+}
+/* Changer la couleur de la flèche en vert au survol */
+.carousel-control-prev:hover i, .carousel-control-next:hover i {
+    color: #2C6B2F; /* Vert pour la flèche */
+}
+
+/*offset custom*/
+.offset-2-2 {
+    margin-left: calc(100% / 12 * 2.2); /* Décalage de 2.5 colonnes */
+}
+
+/*col custom*/
+.col-md-6-5{
+    width: calc(100% / 12 * 6.5);
+}
